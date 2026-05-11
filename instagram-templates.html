@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Küme — Templates Instagram</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --verde: #1B3A2D;
+      --dorado: #C4973A;
+      --crema: #F5EFE0;
+      --verde-medio: #2D5A42;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'DM Sans', sans-serif;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0e0e0e;
+      color: #fff;
+      font-family: var(--sans);
+      padding: 40px 20px;
+    }
+
+    .page-title {
+      text-align: center;
+      font-family: var(--serif);
+      font-size: 2rem;
+      color: var(--dorado);
+      margin-bottom: 8px;
+    }
+    .page-sub {
+      text-align: center;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.4);
+      margin-bottom: 60px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .section-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(196,151,58,0.6);
+      margin-bottom: 24px;
+      padding-left: 4px;
+    }
+
+    .templates-row {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 72px;
+      justify-content: center;
+    }
+
+    /* ── POST CUADRADO 1080×1080 ── */
+    .post {
+      width: 360px;
+      height: 360px;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    /* ── STORY 1080×1920 (proporción 9:16) ── */
+    .story {
+      width: 202px;
+      height: 360px;
+      flex-shrink: 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 4px;
+    }
+
+    .caption {
+      margin-top: 12px;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.35);
+      text-align: center;
+      letter-spacing: 0.04em;
+    }
+
+    /* ════════════════════════
+       TEMPLATE 1 — Carrusel Educativo
+    ════════════════════════ */
+    .t1 {
+      background: var(--crema);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 36px 32px;
+    }
+    .t1-tag {
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      border-bottom: 1px solid rgba(196,151,58,0.35);
+      padding-bottom: 10px;
+    }
+    .t1-body { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 20px 0; }
+    .t1-num {
+      font-family: var(--serif);
+      font-size: 5rem;
+      font-weight: 600;
+      color: var(--verde);
+      opacity: 0.12;
+      line-height: 1;
+      margin-bottom: -20px;
+    }
+    .t1-headline {
+      font-family: var(--serif);
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--verde);
+      line-height: 1.2;
+    }
+    .t1-sub {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: rgba(27,58,45,0.6);
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+    .t1-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .t1-logo {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--verde);
+      letter-spacing: 0.04em;
+    }
+    .t1-slide-num {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      color: rgba(27,58,45,0.4);
+      letter-spacing: 0.08em;
+    }
+
+    /* ════════════════════════
+       TEMPLATE 2 — Post Oscuro / Social Proof
+    ════════════════════════ */
+    .t2 {
+      background: var(--verde);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 40px 32px;
+      gap: 0;
+    }
+    .t2::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(196,151,58,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196,151,58,0.06) 1px, transparent 1px);
+      background-size: 36px 36px;
+    }
+    .t2-quote {
+      font-family: var(--serif);
+      font-size: 4rem;
+      color: var(--dorado);
+      opacity: 0.4;
+      line-height: 0.6;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .t2-text {
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      font-style: italic;
+      color: var(--crema);
+      line-height: 1.45;
+      position: relative;
+      margin-bottom: 24px;
+    }
+    .t2-author {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      position: relative;
+    }
+    .t2-line {
+      width: 40px;
+      height: 1px;
+      background: var(--dorado);
+      margin: 16px auto;
+      opacity: 0.5;
+      position: relative;
+    }
+    .t2-logo {
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      color: rgba(245,239,224,0.3);
+      position: relative;
+      margin-top: 4px;
+    }
+
+    /* ════════════════════════
+       TEMPLATE 3 — Stat / Dato Impactante
+    ════════════════════════ */
+    .t3 {
+      background: var(--crema);
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      padding: 32px;
+    }
+    .t3-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .t3-tag {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(27,58,45,0.4);
+    }
+    .t3-logo {
+      font-family: var(--serif);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--verde);
+    }
+    .t3-center {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .t3-stat {
+      font-family: var(--serif);
+      font-size: 5.5rem;
+      font-weight: 600;
+      color: var(--verde);
+      line-height: 1;
+    }
+    .t3-stat span {
+      color: var(--dorado);
+    }
+    .t3-desc {
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      color: rgba(27,58,45,0.7);
+      max-width: 220px;
+      line-height: 1.5;
+    }
+    .t3-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--dorado);
+      margin-bottom: 0;
+    }
+    .t3-bottom {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(27,58,45,0.35);
+    }
+
+    /* ════════════════════════
+       TEMPLATE 4 — Servicio / Oferta
+    ════════════════════════ */
+    .t4 {
+      background: var(--verde);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .t4-badge {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--verde);
+      background: var(--dorado);
+      padding: 4px 12px;
+      border-radius: 999px;
+      align-self: flex-start;
+    }
+    .t4-title {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--crema);
+      line-height: 1.15;
+      margin-top: 16px;
+    }
+    .t4-price {
+      font-family: var(--sans);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--dorado);
+      margin-top: 8px;
+    }
+    .t4-price span {
+      font-size: 0.75rem;
+      font-weight: 400;
+      color: rgba(245,239,224,0.45);
+      margin-left: 4px;
+    }
+    .t4-bullets {
+      list-style: none;
+      margin-top: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .t4-bullets li {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      color: rgba(245,239,224,0.7);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
+    .t4-bullets li::before {
+      content: '✦';
+      color: var(--dorado);
+      font-size: 0.5rem;
+      margin-top: 3px;
+      flex-shrink: 0;
+    }
+    .t4-cta {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .t4-cta-text {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--dorado);
+    }
+    .t4-cta-line {
+      flex: 1;
+      height: 1px;
+      background: rgba(196,151,58,0.3);
+    }
+    .t4-logo {
+      font-family: var(--serif);
+      font-size: 0.85rem;
+      color: rgba(245,239,224,0.25);
+    }
+
+    /* ════════════════════════
+       STORY 1 — Tip rápido
+    ════════════════════════ */
+    .s1 {
+      background: var(--verde);
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .s1::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(196,151,58,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(196,151,58,0.05) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+    .s1-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+    .s1-logo {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--crema);
+    }
+    .s1-tag {
+      font-family: var(--sans);
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--dorado);
+    }
+    .s1-center {
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 0;
+    }
+    .s1-num {
+      font-family: var(--serif);
+      font-size: 3.5rem;
+      font-weight: 600;
+      color: var(--dorado);
+      opacity: 0.25;
+      line-height: 1;
+    }
+    .s1-title {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--crema);
+      line-height: 1.25;
+    }
+    .s1-body {
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      color: rgba(245,239,224,0.65);
+      line-height: 1.55;
+    }
+    .s1-bottom {
+      position: relative;
+      text-align: center;
+    }
+    .s1-cta {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--verde);
+      background: var(--dorado);
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+
+    /* ════════════════════════
+       STORY 2 — Encuesta / Interacción
+    ════════════════════════ */
+    .s2 {
+      background: var(--crema);
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .s2-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .s2-logo {
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--verde);
+    }
+    .s2-tag {
+      font-family: var(--sans);
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(27,58,45,0.4);
+    }
+    .s2-center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+    .s2-question {
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--verde);
+      line-height: 1.3;
+    }
+    .s2-sub {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      color: rgba(27,58,45,0.5);
+      line-height: 1.5;
+    }
+    .s2-options {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      margin-top: 8px;
+    }
+    .s2-opt {
+      padding: 9px 12px;
+      border: 1px solid rgba(27,58,45,0.2);
+      border-radius: 8px;
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      color: var(--verde);
+      font-weight: 500;
+    }
+    .s2-opt.highlight {
+      background: var(--verde);
+      color: var(--crema);
+      border-color: var(--verde);
+    }
+    .s2-bottom {
+      text-align: center;
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      color: rgba(27,58,45,0.3);
+      letter-spacing: 0.06em;
+    }
+
+    /* ════════════════════════
+       STORY 3 — Resultado / Métrica
+    ════════════════════════ */
+    .s3 {
+      background: linear-gradient(160deg, #1B3A2D 0%, #0a1a12 100%);
+      padding: 24px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .s3-top {
+      display: flex;
+      justify-content: space-between;
+    }
+    .s3-logo { font-family: var(--serif); font-size: 0.95rem; color: var(--crema); }
+    .s3-badge {
+      font-family: var(--sans);
+      font-size: 0.55rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: rgba(196,151,58,0.15);
+      color: var(--dorado);
+      padding: 3px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(196,151,58,0.3);
+    }
+    .s3-center {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+    }
+    .s3-label {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(196,151,58,0.65);
+    }
+    .s3-metric {
+      font-family: var(--serif);
+      font-size: 4rem;
+      font-weight: 600;
+      color: var(--crema);
+      line-height: 1;
+    }
+    .s3-metric span { color: var(--dorado); }
+    .s3-desc {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      color: rgba(245,239,224,0.6);
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+    .s3-divider { width: 30px; height: 1px; background: var(--dorado); opacity: 0.4; margin: 10px 0; }
+    .s3-client {
+      font-family: var(--sans);
+      font-size: 0.62rem;
+      color: rgba(245,239,224,0.35);
+      letter-spacing: 0.06em;
+    }
+    .s3-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .s3-cta {
+      font-family: var(--sans);
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--dorado);
+      letter-spacing: 0.06em;
+    }
+    .s3-arrow {
+      font-size: 0.9rem;
+      color: var(--dorado);
+    }
+
+    /* ════════════════════════
+       SLIDE CARRUSEL — Portada + Slide interior
+    ════════════════════════ */
+    .tc {
+      background: var(--verde);
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .tc-tag {
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--dorado);
+      border-bottom: 1px solid rgba(196,151,58,0.25);
+      padding-bottom: 12px;
+    }
+    .tc-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+    .tc-num {
+      font-family: var(--serif);
+      font-size: 5rem;
+      font-weight: 600;
+      color: var(--dorado);
+      opacity: 0.15;
+      line-height: 1;
+    }
+    .tc-title {
+      font-family: var(--serif);
+      font-size: 1.85rem;
+      font-weight: 600;
+      color: var(--crema);
+      line-height: 1.2;
+    }
+    .tc-sub {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: rgba(245,239,224,0.5);
+      line-height: 1.6;
+    }
+    .tc-bullet {
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      color: rgba(245,239,224,0.7);
+      padding-left: 16px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .tc-bullet::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--dorado);
+    }
+    .tc-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .tc-logo { font-family: var(--serif); font-size: 0.9rem; color: rgba(245,239,224,0.3); }
+    .tc-slide { font-family: var(--sans); font-size: 0.6rem; color: rgba(196,151,58,0.5); letter-spacing: 0.1em; }
+
+    /* ── Nav ── */
+    .nav-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+    .nav-tab {
+      font-family: var(--sans);
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 8px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(196,151,58,0.3);
+      color: rgba(255,255,255,0.5);
+      background: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .nav-tab.active, .nav-tab:hover {
+      border-color: #C4973A;
+      color: #C4973A;
+    }
+
+    .template-group { margin-bottom: 80px; }
+
+    .caption-text {
+      font-family: var(--sans);
+      font-size: 0.68rem;
+      color: rgba(255,255,255,0.25);
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .uso-badge {
+      display: inline-block;
+      font-family: var(--sans);
+      font-size: 0.6rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: rgba(196,151,58,0.12);
+      color: #C4973A;
+      border: 1px solid rgba(196,151,58,0.25);
+      margin-bottom: 20px;
+    }
+
+    .instrucciones {
+      max-width: 760px;
+      margin: 0 auto 60px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(196,151,58,0.15);
+      border-radius: 12px;
+      padding: 28px 32px;
+    }
+    .instrucciones h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--dorado);
+      margin-bottom: 16px;
+    }
+    .instrucciones ol {
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .instrucciones li {
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.6;
+    }
+    .instrucciones li strong { color: rgba(255,255,255,0.85); }
+  </style>
+</head>
+<body>
+
+  <h1 class="page-title">küme</h1>
+  <p class="page-sub">Sistema de templates — Instagram</p>
+
+  <div class="instrucciones">
+    <h3>Cómo usar estos templates</h3>
+    <ol>
+      <li><strong>Abrí Canva</strong> y creá un diseño nuevo con las medidas indicadas en cada sección.</li>
+      <li><strong>Usá estos diseños como referencia visual exacta</strong> — colores, tipografías y proporciones.</li>
+      <li><strong>Colores:</strong> Verde <code>#1B3A2D</code> · Dorado <code>#C4973A</code> · Crema <code>#F5EFE0</code></li>
+      <li><strong>Fuentes:</strong> Cormorant Garamond (títulos) · DM Sans (cuerpo) — ambas gratuitas en Canva.</li>
+      <li><strong>Guardá cada template</strong> como plantilla en Canva para reutilizar semana a semana.</li>
+    </ol>
+  </div>
+
+  <!-- ══ POSTS 1080×1080 ══ -->
+  <div class="template-group">
+    <p class="section-label">Posts cuadrados — 1080 × 1080 px</p>
+
+    <div class="templates-row">
+
+      <!-- Template 1: Carrusel educativo (slide interior) -->
+      <div>
+        <span class="uso-badge">Carrusel · slide 2-6</span>
+        <div class="post t1">
+          <div class="t1-tag">Tip de marketing · küme</div>
+          <div class="t1-body">
+            <div class="t1-num">01</div>
+            <h2 class="t1-headline">Tu bio de Instagram<br>no está vendiendo</h2>
+            <p class="t1-sub">Las primeras 2 líneas son lo único que se ve sin "ver más". Tenés 150 caracteres para capturar o perder a alguien para siempre.</p>
+          </div>
+          <div class="t1-footer">
+            <span class="t1-logo">küme</span>
+            <span class="t1-slide-num">01 / 05</span>
+          </div>
+        </div>
+        <p class="caption-text">Fondo crema · Texto verde · Número grande de fondo</p>
+      </div>
+
+      <!-- Template 2: Testimonio -->
+      <div>
+        <span class="uso-badge">Post estático · testimonio</span>
+        <div class="post t2">
+          <div class="t2-quote">"</div>
+          <p class="t2-text">Pasé de publicar sin estrategia a tener una agenda de contenido que realmente funciona.</p>
+          <div class="t2-line"></div>
+          <span class="t2-author">María G. · Gastronómica</span>
+          <span class="t2-logo">küme</span>
+        </div>
+        <p class="caption-text">Fondo verde · Comilla dorada · Texto crema</p>
+      </div>
+
+      <!-- Template 3: Dato/Stat -->
+      <div>
+        <span class="uso-badge">Post estático · dato impactante</span>
+        <div class="post t3">
+          <div class="t3-top">
+            <span class="t3-tag">Marketing · Argentina 2025</span>
+            <span class="t3-logo">küme</span>
+          </div>
+          <div class="t3-center">
+            <div class="t3-stat">71<span>%</span></div>
+            <div class="t3-divider"></div>
+            <p class="t3-desc">de las compras online en Argentina arrancan desde el celular.</p>
+            <p class="t3-desc" style="font-size:0.75rem; color:rgba(27,58,45,0.45); margin-top:4px">¿Tu web está optimizada para eso?</p>
+          </div>
+          <span class="t3-bottom">kume.com.ar · @kume.agenciamkt</span>
+        </div>
+        <p class="caption-text">Fondo crema · Número verde gigante · Detalle dorado</p>
+      </div>
+
+      <!-- Template 4: Servicio/Oferta -->
+      <div>
+        <span class="uso-badge">Post estático · servicio</span>
+        <div class="post t4">
+          <div>
+            <span class="t4-badge">Servicio</span>
+            <h2 class="t4-title">Gestión de<br>Redes Sociales</h2>
+            <div class="t4-price">$300.000 <span>/ mes</span></div>
+          </div>
+          <ul class="t4-bullets">
+            <li>Calendario editorial mensual</li>
+            <li>8-12 posts diseñados por mes</li>
+            <li>Reels y stories incluidos</li>
+            <li>Gestión de comunidad activa</li>
+          </ul>
+          <div class="t4-cta">
+            <span class="t4-cta-text">Consulta gratis →</span>
+            <div class="t4-cta-line"></div>
+            <span class="t4-logo">küme</span>
+          </div>
+        </div>
+        <p class="caption-text">Fondo verde · Precio dorado · Lista crema</p>
+      </div>
+
+      <!-- Template 5: Portada carrusel -->
+      <div>
+        <span class="uso-badge">Carrusel · portada slide 1</span>
+        <div class="post tc">
+          <div class="tc-tag">Guía práctica · küme</div>
+          <div class="tc-body">
+            <div class="tc-num">05</div>
+            <h2 class="tc-title">señales de que tu Instagram está perdiendo ventas</h2>
+            <p class="tc-sub">Y cómo solucionarlo esta semana.</p>
+            <div class="tc-bullet">Sin estrategia detrás del contenido</div>
+            <div class="tc-bullet">Bio que no convierte</div>
+            <div class="tc-bullet">Ningún CTA claro</div>
+          </div>
+          <div class="tc-footer">
+            <span class="tc-logo">küme</span>
+            <span class="tc-slide">Deslizá →</span>
+          </div>
+        </div>
+        <p class="caption-text">Fondo verde · Número dorado gigante · Lista con flechas</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ STORIES 1080×1920 ══ -->
+  <div class="template-group">
+    <p class="section-label">Stories — 1080 × 1920 px (proporción 9:16)</p>
+
+    <div class="templates-row">
+
+      <!-- Story 1: Tip rápido -->
+      <div>
+        <span class="uso-badge">Story · tip lunes</span>
+        <div class="story s1">
+          <div class="s1-top">
+            <span class="s1-logo">küme</span>
+            <span class="s1-tag">Tip del día</span>
+          </div>
+          <div class="s1-center">
+            <div class="s1-num">01</div>
+            <h3 class="s1-title">Posteá cuando<br>tu audiencia<br>está activa</h3>
+            <p class="s1-body">El mejor horario en Argentina: martes a jueves de 12-14 hs y 19-21 hs. Revisá tus métricas cada 2 semanas y ajustá.</p>
+          </div>
+          <div class="s1-bottom">
+            <span class="s1-cta">Guardar tip →</span>
+          </div>
+        </div>
+        <p class="caption-text">Verde · Número grande desvanecido · CTA dorado</p>
+      </div>
+
+      <!-- Story 2: Encuesta -->
+      <div>
+        <span class="uso-badge">Story · encuesta martes</span>
+        <div class="story s2">
+          <div class="s2-top">
+            <span class="s2-logo">küme</span>
+            <span class="s2-tag">¿Y vos?</span>
+          </div>
+          <div class="s2-center">
+            <h3 class="s2-question">¿Cuál es tu mayor problema con el marketing hoy?</h3>
+            <p class="s2-sub">Respondé para que podamos ayudarte mejor 👇</p>
+            <div class="s2-options">
+              <div class="s2-opt highlight">No sé qué publicar</div>
+              <div class="s2-opt">No tengo tiempo</div>
+              <div class="s2-opt">No veo resultados</div>
+              <div class="s2-opt">No tengo presupuesto</div>
+            </div>
+          </div>
+          <div class="s2-bottom">@kume.agenciamkt</div>
+        </div>
+        <p class="caption-text">Crema · Opción activa en verde · Sans-serif</p>
+      </div>
+
+      <!-- Story 3: Resultado/métrica -->
+      <div>
+        <span class="uso-badge">Story · resultado cliente</span>
+        <div class="story s3">
+          <div class="s3-top">
+            <span class="s3-logo">küme</span>
+            <span class="s3-badge">Resultado real</span>
+          </div>
+          <div class="s3-center">
+            <span class="s3-label">Seguidores nuevos en</span>
+            <div class="s3-metric">+<span>3.200</span></div>
+            <span class="s3-label">en 90 días</span>
+            <div class="s3-divider"></div>
+            <p class="s3-desc">Cliente del rubro gastronómico. Sin ads. Solo estrategia de contenido + comunidad.</p>
+            <span class="s3-client">Cliente real · datos con permiso</span>
+          </div>
+          <div class="s3-bottom">
+            <span class="s3-cta">¿Querés esto?</span>
+            <span class="s3-arrow">→</span>
+          </div>
+        </div>
+        <p class="caption-text">Gradiente verde · Métrica gigante · Badge dorado</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ══ CAPTION TEMPLATES ══ -->
+  <div class="template-group">
+    <p class="section-label">Captions — copiar y adaptar</p>
+    <div style="max-width:860px; margin: 0 auto; display:grid; grid-template-columns:1fr 1fr; gap:20px;">
+
+      <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(196,151,58,0.15); border-radius:12px; padding:24px;">
+        <p style="font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:#C4973A; margin-bottom:12px;">Caption carrusel educativo</p>
+        <p style="font-size:0.78rem; color:rgba(255,255,255,0.65); line-height:1.7;">
+          5 señales de que tu Instagram está perdiendo ventas (y cómo arreglarlo esta semana) 👇<br><br>
+          Publicar sin estrategia es como tener un local en la mitad del campo.<br><br>
+          Si te identificás con alguna de estas señales, es hora de hacer un cambio real.<br><br>
+          Guardá este post para no olvidarlo 🔖<br><br>
+          ¿Cuál te pegó más? Comentá abajo 👇<br><br>
+          <span style="color:rgba(255,255,255,0.35);">#marketingdigital #emprendedores #instagramtips #marketingargentina #agenciademarketing #redesociales #kume #estrategiadecontenido #pymes #emprendedoresargentinos</span>
+        </p>
+      </div>
+
+      <div style="background:rgba(255,255,255,0.03); border:1px solid rgba(196,151,58,0.15); border-radius:12px; padding:24px;">
+        <p style="font-size:0.6rem; letter-spacing:0.1em; text-transform:uppercase; color:#C4973A; margin-bottom:12px;">Caption testimonio</p>
+        <p style="font-size:0.78rem; color:rgba(255,255,255,0.65); line-height:1.7;">
+          Esto es lo que más nos gusta de nuestro trabajo 🌿<br><br>
+          Cuando un cliente pasa de publicar sin saber para qué, a tener una estrategia que realmente funciona, se nota en todo: en los números, en cómo habla de su negocio, en la confianza.<br><br>
+          Eso es lo que hacemos en küme.<br><br>
+          Si querés que pase lo mismo con tu marca, arrancamos con una consulta gratuita. Link en bio 👆<br><br>
+          <span style="color:rgba(255,255,255,0.35);">#testimonios #resultados #marketingdigital #agenciakume #emprendedores #crececonmarketing</span>
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div style="text-align:center; padding: 40px 0 60px; font-family:var(--serif); color:rgba(196,151,58,0.4); font-size:0.9rem; letter-spacing:0.05em;">
+    küme — sistema de contenido Instagram · actualizar mensualmente
+  </div>
+
+</body>
+</html>
