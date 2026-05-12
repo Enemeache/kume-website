@@ -247,47 +247,13 @@ ul   { list-style: none; }
   justify-content: space-between;
 }
 
-/* Logo antiguo — ya no se usa */
-.nav-logo { display: none; }
-
-/* ── LOGO PNG ── */
-.nav-logo-link {
-  display: inline-flex;
-  align-items: center;
-  background: var(--crema);
-  padding: 5px 14px 5px 10px;
-  border-radius: 8px;
-  transition: background 0.25s ease, opacity 0.25s ease;
-}
-
-.nav-logo-link:hover { opacity: 0.88; }
-
-.nav.scrolled .nav-logo-link {
-  background: rgba(251, 248, 239, 0.92);
-}
-
-.nav-logo-img {
-  height: 34px;
-  width: auto;
-  display: block;
-  object-fit: contain;
-}
-
-.footer-logo-link {
-  display: inline-flex;
-  align-items: center;
-  background: rgba(251, 248, 239, 0.08);
-  padding: 5px 14px 5px 10px;
-  border-radius: 8px;
-  border: 1px solid rgba(251, 248, 239, 0.08);
-  margin-bottom: 10px;
-}
-
-.footer-logo-img {
-  height: 28px;
-  width: auto;
-  display: block;
-  object-fit: contain;
+.nav-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--crema);
+  letter-spacing: -0.045em;
+  line-height: 1;
 }
 
 /* ── LOGO KÜME CON OJOS ── */
@@ -2431,11 +2397,11 @@ ul   { list-style: none; }
 }
 
 .footer-logo {
-  font-family: var(--fuente-logo);
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   font-weight: 800;
   color: var(--crema);
-  letter-spacing: -0.04em;
+  letter-spacing: -0.045em;
   display: block;
   margin-bottom: 10px;
 }
