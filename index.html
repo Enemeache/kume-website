@@ -96,7 +96,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet" />
   <!-- Three.js removido — reemplazado por kinetic CSS/JS hero -->
 
 </head>
@@ -110,7 +110,28 @@
   ============================================================ -->
   <nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
     <div class="nav-inner">
-      <a href="#inicio" class="nav-logo" aria-label="küme — inicio">küme</a>
+      <!-- LOGO SVG — küme. con ojos animados -->
+      <a href="#inicio" class="nav-logo-link" aria-label="küme — inicio">
+        <span class="logo-kume" aria-hidden="true">
+          <span class="logo-k">k</span>
+          <span class="logo-ue">
+            <svg class="logo-ojos" viewBox="0 0 56 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Ojo izquierdo -->
+              <ellipse cx="14" cy="17" rx="12" ry="13.5" fill="#FBF8EF"/>
+              <ellipse cx="14" cy="20" rx="7.5" ry="9" fill="#1B3A2D"/>
+              <ellipse cx="11" cy="16.5" rx="3.2" ry="2.6" fill="white"/>
+              <path d="M2 9.5 Q14 2.5 26 9.5" stroke="#1B3A2D" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+              <!-- Ojo derecho -->
+              <ellipse cx="42" cy="17" rx="12" ry="13.5" fill="#FBF8EF"/>
+              <ellipse cx="42" cy="20" rx="7.5" ry="9" fill="#1B3A2D"/>
+              <ellipse cx="39" cy="16.5" rx="3.2" ry="2.6" fill="white"/>
+              <path d="M30 9.5 Q42 2.5 54 9.5" stroke="#1B3A2D" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            </svg>
+            <span class="logo-u">u</span>
+          </span>
+          <span class="logo-me">me.</span>
+        </span>
+      </a>
 
       <ul class="nav-links" id="navLinks" role="list">
         <li><a href="#servicios">Servicios</a></li>
@@ -1641,7 +1662,25 @@
     <div class="container">
       <div class="footer-top">
         <div>
-          <a href="#inicio" class="footer-logo">küme</a>
+          <a href="#inicio" class="footer-logo-link" aria-label="küme">
+            <span class="logo-kume logo-kume--footer" aria-hidden="true">
+              <span class="logo-k">k</span>
+              <span class="logo-ue">
+                <svg class="logo-ojos" viewBox="0 0 56 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <ellipse cx="14" cy="17" rx="12" ry="13.5" fill="#FBF8EF"/>
+                  <ellipse cx="14" cy="20" rx="7.5" ry="9" fill="#1B3A2D"/>
+                  <ellipse cx="11" cy="16.5" rx="3.2" ry="2.6" fill="white"/>
+                  <path d="M2 9.5 Q14 2.5 26 9.5" stroke="#1B3A2D" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+                  <ellipse cx="42" cy="17" rx="12" ry="13.5" fill="#FBF8EF"/>
+                  <ellipse cx="42" cy="20" rx="7.5" ry="9" fill="#1B3A2D"/>
+                  <ellipse cx="39" cy="16.5" rx="3.2" ry="2.6" fill="white"/>
+                  <path d="M30 9.5 Q42 2.5 54 9.5" stroke="#1B3A2D" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+                </svg>
+                <span class="logo-u">u</span>
+              </span>
+              <span class="logo-me">me.</span>
+            </span>
+          </a>
           <p class="footer-logo-tagline">Hacemos que tu marca tenga algo real para decir.</p>
         </div>
         <nav class="footer-nav" aria-label="Navegación footer">
